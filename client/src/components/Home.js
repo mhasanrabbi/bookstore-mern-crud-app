@@ -1,7 +1,12 @@
 import React from "react";
+import Books from "./Book/Books";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Books />
+    </div>
+  );
 };
 
 export default Home;
