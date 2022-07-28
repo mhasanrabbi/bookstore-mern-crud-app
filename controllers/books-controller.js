@@ -12,7 +12,7 @@ const getAllBooks = async (req, res, next) => {
     return res.status(404).json({ message: "No books found" });
   }
 
-  return res.status(200).json({ books });
+  return res.status(200).json({ message: "Books found", books });
 };
 
 const addBook = async (req, res, next) => {
@@ -50,7 +50,7 @@ const getBookById = async (req, res, next) => {
     return res.status(404).json({ message: "No book found" });
   }
 
-  return res.status(200).json({ book });
+  return res.status(200).json({ message: "Book found", book });
 };
 
 const updateBook = async (req, res, next) => {
@@ -74,7 +74,7 @@ const updateBook = async (req, res, next) => {
     return res.status(404).json({ message: "No book found" });
   }
 
-  return res.status(200).json({ book });
+  return res.status(200).json({ message: "Book updated" });
 };
 
 const deleteBook = async (req, res, next) => {
@@ -87,7 +87,7 @@ const deleteBook = async (req, res, next) => {
   }
 
   if (!book) {
-    return res.status(404).json({ message: "No book found" });
+    return res.status(404).json({ message: "Unable to delete" });
   }
 
   return res.status(200).json({ message: "Book deleted" });
