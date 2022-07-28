@@ -4,7 +4,7 @@ const router = require("./routes/book-routes");
 const app = express();
 
 // Middlewares
-
+app.use(express.json());
 app.use("/books", router);
 
 // environment variables
