@@ -4,7 +4,6 @@ import {
   FormControlLabel,
   FormLabel,
   TextField,
-  Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
 import axios from "axios";
@@ -18,7 +17,6 @@ const AddBook = () => {
     description: "",
     price: "",
     author: "",
-
     image: "",
   });
   const [checked, setChecked] = useState(false);
